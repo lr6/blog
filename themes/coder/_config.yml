@@ -38,9 +38,9 @@ favicon: /img/favicon.ico
 
 # 菜单栏配置 | Nav Bar Settings
 menu:
-  关于我👀: /about
-  访问主站🎉: https://zhio.me
-  GitHub🐒: https://github.com/lr6
+  关于我: /about
+  访问主站: http://zhio.me
+  GitHub: https://github.com/lr6
 
 
 # 站内关键词搜索 | Local Search

@@ -50,4 +50,4 @@ jobs:
 
       # 发送消息到微信
       - name: result
-          run: curl "https://sc.ftqq.com/SCU136701Tdfec0de76d86a52d6a8c15025083a0f75fdc1c72d8773.send?text=推送博客结束！"
+        run: curl "https://sc.ftqq.com/SCU136701Tdfec0de76d86a52d6a8c15025083a0f75fdc1c72d8773.send?text=推送博客结束！"

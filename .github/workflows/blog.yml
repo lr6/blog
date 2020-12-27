@@ -38,12 +38,12 @@ jobs:
       - name: result
         run: ls -la
 
-#       - name: copy file via ssh password
-#         uses: appleboy/scp-action@master
-#         with:
-#           host: ${{ secrets.HOST }}
-#           username: root
-#           password: ${{ secrets.PASSWD }}
-#           port: 22
-#           source: "_book/*"
-#           target: "/home/doc/"
+       - name: copy file via ssh password
+         uses: appleboy/scp-action@master
+         with:
+           host: ${{ secrets.HOST }}
+           username: root
+           password: ${{ secrets.PASSWD }}
+           port: 22
+           source: "public/*"
+           target: "/home/blog/"

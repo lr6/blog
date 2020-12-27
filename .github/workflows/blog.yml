@@ -32,8 +32,8 @@ jobs:
         run: npm install hexo-cli -g
 
       # yarn
-      - name: yarn version
-        run: yarn --version
+      - name: install modules
+        run: yarn && hexo g
 
       - name: result
         run: ls -la

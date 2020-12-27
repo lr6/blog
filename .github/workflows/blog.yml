@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: build + scp -> blog
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Build Gitbook
+    runs-on: ubuntu-18.04
+    steps:
+      # check repo
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # install node
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 10.x
+
+      - name: Yarn CLI
+        uses: CultureHQ/actions-yarn@v1.0.1
+
+      # install gitbook-cli
+      - name: install hexo
+        run: npm install hexo-cli -g
+
+      # yarn
+      - name: yarn version
+        run: yarn --version
+
+      - name: result
+        run: ls -la
+
+#       - name: copy file via ssh password
+#         uses: appleboy/scp-action@master
+#         with:
+#           host: ${{ secrets.HOST }}
+#           username: root
+#           password: ${{ secrets.PASSWD }}
+#           port: 22
+#           source: "_book/*"
+#           target: "/home/doc/"

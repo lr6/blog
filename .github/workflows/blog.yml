@@ -45,5 +45,5 @@ jobs:
           username: root
           password: ${{ secrets.PASSWD }}
           port: 22
-          source: "/public/*"
+          source: "./public/*"
           target: "/usr/share/nginx/html"

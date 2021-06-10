@@ -38,16 +38,6 @@ jobs:
       - name: result
         run: ls -la
 
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: root
-          password: ${{ secrets.PASSWD }}
-          port: 22
-          source: "./public/*"
-          target: "/usr/share/nginx/html"
-
       # 发送消息到微信
       - name: result
         run: curl "https://sctapi.ftqq.com/SCT45133T0IQUt72NvsnV4cYakhuTFiuW.send?title=blog 构建完成！"

@@ -1,5 +1,6 @@
 ---
 title: NPM Binary 镜像配置
+date: 2022-05-13
 tags: npm
 ---
 # NPM Binary 镜像配置
